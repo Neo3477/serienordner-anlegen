@@ -3,8 +3,8 @@
 $name= Read-Host -Prompt 'Name der Serie: '
 
 #Abfrage Anzahl der Staffeln
-
-$anzahl= Read-Host -Prompt 'Wieviele Ordner sollen angelegt werden: '
+[int32]$von = Read-Host -Prompt 'Wieviele Ordner sollen angelegt werden: '
+$bis= Read-Host -Prompt 'Wieviele Ordner sollen angelegt werden: '
 
 #Serienordner wird erstellt
 
@@ -16,9 +16,9 @@ cd $name
 
 #Staffelordner werden nach vorgabe erstellt
 
-$i = 1
+$i = $von
 
-while ($i -le $anzahl) {
+while ($i -le $bis) {
     New-Item -ItemType Directory -Name "Staffel $i"
     $i++
 }
