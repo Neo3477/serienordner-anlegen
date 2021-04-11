@@ -3,8 +3,8 @@
 $name= Read-Host -Prompt 'Name der Serie: '
 
 #Abfrage Anzahl der Staffeln
-[int32]$von = Read-Host -Prompt 'Wieviele Ordner sollen angelegt werden: '
-$bis= Read-Host -Prompt 'Wieviele Ordner sollen angelegt werden: '
+[int32]$von = Read-Host -Prompt 'Nummer der ersten Staffel: '
+$bis= Read-Host -Prompt 'Nummer der letzten Staffel: '
 
 #Serienordner wird erstellt
 
